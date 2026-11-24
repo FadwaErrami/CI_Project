@@ -2,13 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Clonage') {
-            steps {
-                git branch: 'main',
-                    url: 'https://github.com/TON_USERNAME/CI_Project.git'
-            }
-        }
-
         stage('Vérification Python') {
             steps {
                 bat 'python --version'
